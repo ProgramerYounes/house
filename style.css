@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #b0effc;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+.search-bar {
+    padding: 20px;
+    background-color: #fff;
+    display: none;
+}
+
+.search-bar form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search-bar input,
+.search-bar select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.featured-property {
+    padding: 20px;
+    background-color: #ffb753d2;
+    text-align: center;
+}
+
+.featured-property h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.featured-property img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.featured-property a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+
+/*container page*/
+
+#pree{
+    font-size: 25px;
+    
+}
+#nopre{
+    color: red;
+    text-decoration: line-through;
+    text-decoration-style: middle;
+}
+
+
+
+
+.h23{
+    color: #ff9500;
+    text-align: center;
+}
+
+.latest-properties .he3{
+    width: 100%;
+    text-align: center;
+}
+.latest-properties {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.latest-properties .property {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: end;
+}
+
+.latest-properties .property img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.latest-properties .property h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.latest-properties .property p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.latest-properties .property p a {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ff9500;
+    text-decoration: dashed;
+    font-weight: bolder;
+}
+
+.property-categories {
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: end;
+}
+
+.property-categories h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.property-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.property-categories li {
+    margin-bottom: 10px;
+}
+
+.property-categories a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+footer li a {
+  text-decoration: none;
+  color: #007bff;
+}
+.featured-property.transition-right-to-left {
+    animation: slideInRight 0.5s ease-in-out forwards; 
+}
+#helsa{
+    text-align: center;
+}
+
+.veomore button{
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    margin-left: 10%;
+    border: 0.2px solid #ccc;
+    border-radius: 19px;
+    cursor: pointer;
+}
+.veomore button a{
+    text-decoration: none;
+    text-align: center;
+    color: #007bff;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*responsive web desine*/
+  @keyframes slideInRight {
+    from { right: -100%; }
+    to { right: 0; }
+  }
+
+
+
+@media (max-width: 768px) {
+    .latest-properties .property {
+      width: calc(50% - 20px); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .latest-properties .property {
+      width: 100%; 
+    }
+  
+    .search-bar form {
+      flex-direction: column; 
+    }
+  }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المنزل</title>
+  <link rel="stylesheet" href="house.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">بحث عن شقة</a> <h1>تفاصيل المنزل</h1>
+  </header>
+
+  <main id="main-content">
+    <div class="house-container">
+      <div class="house-images-container">
+        <div id="house-images"></div>
+        <nav class="house-images-nav">
+          <button id="prev-image">السابق</button>
+          <button id="next-image">التالي</button>
+        </nav>
+      </div>
+
+      <div class="house-info">
+        <h2>شقة واسعة في وسط المدينة</h2>
+        <p>شقة جميلة ومشرقة في قلب المدينة. 3 غرف نوم، 2 حمام، 120 متر مربع.</p>
+        <ul>
+          <li>3 غرف نوم</li>
+          <li>2 حمام</li>
+          <li>120 متر مربع</li>
+          <li>مطبخ مجهز بالكامل</li>
+          <li>غرفة معيشة واسعة</li>
+          <li>تلفزيون ذكي</li>
+          <li>إنترنت Wi-Fi</li>
+          <li>غسالة ملابس</li>
+          <li>مكيف هواء</li>
+        </ul>
+        <div class="price-info">
+            <div class="house-price">
+                <h2>200 درهم/ليلة</h2>
+                <p>شامل جميع الرسوم</p>
+              </div>
+          </div>
+          <button class="book-button" onclick="location.href='resetHousr.html'">احجز الآن</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+// ... (Previous JavaScript code)
+
+// House images data
+const houseImages = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg'];
+let currentImageIndex = 0;
+
+// Show house image function
+function showHouseImage(imageIndex) {
+  const houseImage = document.getElementById('house-images');
+  houseImage.innerHTML = `<img src="${houseImages[imageIndex]}" alt="صورة المنزل">`;
+}
+
+// Previous image function
+function prevImage() {
+  if (currentImageIndex > 0) {
+    currentImageIndex--;
+    showHouseImage(currentImageIndex);
+    updateNavigationButtons();
+  }
+}
+
+// Next image function
+function nextImage() {
+  if (currentImageIndex < houseImages.length - 1) {
+    currentImageIndex++;
+    showHouseImage(currentImageIndex);
+    updateNavigationButtons();
+  }
+}
+
+// Update navigation buttons state
+function updateNavigationButtons() {
+  const prevButton = document.getElementById('prev-image');
+  const nextButton = document.getElementById('next-image');
+
+  prevButton.disabled = currentImageIndex === 0;
+  nextButton.disabled = currentImageIndex === houseImages.length - 1;
+}
+
+// Initialize house images
+showHouseImage(currentImageIndex);
+updateNavigationButtons();
+
+// Add event listeners to navigation buttons
+document.getElementById('prev-image').addEventListener('click', prevImage);
+document.getElementById('next-image').addEventListener('click', nextImage);
+
+  </script>
+</body>
+</html>

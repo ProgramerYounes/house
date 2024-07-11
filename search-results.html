@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نتائج البحث عن الشقق</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="helsa">الشقق للكراء</h1>
+
+  <section class="search-bar">
+    <form action="#">
+        <select >
+            <option value="" id="city-select">أين تبحث؟</option>
+            <option value="طنجة">طنجة</option>
+            <option value="تطوان">تطوان</option>
+            <option value="الحسيمة">الحسيمة</option>
+            <option value="الجبهة">الجبهة</option>
+            <option value="المضيق">المضيق</option>
+        </select>
+        <select>
+            <option value="" id="bedrooms-select">عدد الغرف</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+        </select>
+        <input type="number" placeholder="السعر الأدنى" id="min-price">
+        <input type="number" placeholder="السعر الأعلى" id="max-price">
+        <button type="submit" id="search-button">بحث</button>
+    </form>
+</section>
+<section class="latest-properties">
+  <div class="property" id="property">
+      <img src="img/img1.jpg" alt="صورة العقار">
+      <h3>شقة واسعة من 2 غرف نوم</h3>
+      <p>مناسبة للعائلات الصغيرة. <a href="house.html">المزيد من التفاصيل</a></p>
+      <p>طنجة</p>
+      <p id="pree"><i>190 DH </i><p  id="nopre">280 DH</p></p>
+  </div>
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
